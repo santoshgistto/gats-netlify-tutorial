@@ -1,0 +1,28 @@
+backend:
+  name: test-repo
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: json
+    label: json
+    folder: "src/pages/post"
+    create: true
+    format : json
+    extension: json
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: Stories
+    label: Stories
+    folder: Stories
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }    
